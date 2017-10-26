@@ -15,6 +15,7 @@ const styles = {
     width: 1500,
     height: 500,
     overflowY: 'auto',
+    cursor: 'pointer',
   },
 };
 
@@ -22,7 +23,8 @@ const styles = {
 const tilesData = [
   {
     img: 'https://i.imgur.com/bS1EpQi.png',
-    title: 'Forgotten'
+    title: 'Forgotten',
+    link: 'http://www.ninjarabbits.com/login'
     },
   {
     img: 'https://i.imgur.com/zXq7HOU.png',
@@ -61,6 +63,10 @@ handleClose = () => {
   });
 };
 
+goToLink = (tile) => {
+  window.open(tile.link);
+}
+
 
   render() {
     const actions = [
@@ -84,14 +90,17 @@ handleClose = () => {
               <GridTile
                 key={tile.img}
                 title={tile.title}
+                titleStyle={{fontSize: '20px'}}
+                onClick={() => {this.goToLink(tile)}}
               >
+                {/* <a href={tile.link}/> */}
                 <img src={tile.img} />
               </GridTile>
             ))}
           </GridList>
         </div>
         <div style={{display: 'flex', flexDirection: 'row', margin: '12px'}}>
-          <RaisedButton label="More Info" onClick={this.handleOpenForgotten} style={{marginLeft: '150px'}}/>
+          <RaisedButton label="About Forgotten" onClick={this.handleOpenForgotten} style={{marginLeft: '120px', fontWeight: 'bold'}}/>
                 <Dialog
                   title="Forgotten"
                   actions={actions}
@@ -102,7 +111,7 @@ handleClose = () => {
                 >
                   FORGOTTEN
                 </Dialog>
-          <RaisedButton label="More Info" onClick={this.handleOpenPicognito} style={{margin: 'auto'}}/>
+          <RaisedButton label="About Picognito" onClick={this.handleOpenPicognito} style={{margin: 'auto'}}/>
                 <Dialog
                   title="Picognito"
                   actions={actions}
@@ -113,7 +122,7 @@ handleClose = () => {
                 >
                   PICOGNITO
                 </Dialog>
-          <RaisedButton label="More Info" onClick={this.handleOpenPassPass} style={{marginRight: '150px'}}/>
+          <RaisedButton label="About PassPass" onClick={this.handleOpenPassPass} style={{marginRight: '120px'}}/>
                 <Dialog
                   title="PassPass"
                   actions={actions}
