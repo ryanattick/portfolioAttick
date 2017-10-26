@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {GridList, GridTile} from 'material-ui/GridList';
-import IconButton from 'material-ui/IconButton';
-import StarBorder from 'material-ui/svg-icons/toggle/star-border';
+import Dialog from 'material-ui/Dialog';
+import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
 import './App.css';
 
 const styles = {
@@ -34,27 +35,96 @@ const tilesData = [
 ];
 
 class Projects extends Component {
+  state = {
+    openForgotten: false,
+    openPicognito: false,
+    openPassPass: false
+  };
+
+handleOpenForgotten = () => {
+  this.setState({openForgotten: true}, () => {console.log(this.state.openForgotten)});
+};
+
+handleOpenPicognito = () => {
+  this.setState({openPicognito: true});
+};
+
+handleOpenPassPass = () => {
+  this.setState({openPassPass: true});
+};
+
+handleClose = () => {
+  this.setState({
+    openForgotten: false,
+    openPicognito: false,
+    openPassPass: false
+  });
+};
+
 
   render() {
-    return (
-      <div style={styles.root}>
-        <GridList
-          cols={3}
-          cellHeight={500}
-          style={styles.gridList}
-          padding={4}
-        >
-          {tilesData.map((tile) => (
-            <GridTile
-              key={tile.img}
-              title={tile.title}
-              // style={{marginLeft: '50px'}}
+    const actions = [
+      <FlatButton
+        label="Close"
+        primary={true}
+        onClick={this.handleClose}
+      />,
+    ];
 
-            >
-              <img src={tile.img} />
-            </GridTile>
-          ))}
-        </GridList>
+    return (
+      <div>
+        <div style={styles.root}>
+          <GridList
+            cols={3}
+            cellHeight={500}
+            style={styles.gridList}
+            padding={4}
+          >
+            {tilesData.map((tile) => (
+              <GridTile
+                key={tile.img}
+                title={tile.title}
+              >
+                <img src={tile.img} />
+              </GridTile>
+            ))}
+          </GridList>
+        </div>
+        <div style={{display: 'flex', flexDirection: 'row', margin: '12px'}}>
+          <RaisedButton label="More Info" onClick={this.handleOpenForgotten} style={{marginLeft: '150px'}}/>
+                <Dialog
+                  title="Forgotten"
+                  actions={actions}
+                  modal={false}
+                  open={this.state.openForgotten}
+                  onRequestClose={this.handleClose}
+                  contentStyle={{textAlign: 'center'}}
+                >
+                  FORGOTTEN
+                </Dialog>
+          <RaisedButton label="More Info" onClick={this.handleOpenPicognito} style={{margin: 'auto'}}/>
+                <Dialog
+                  title="Picognito"
+                  actions={actions}
+                  modal={false}
+                  open={this.state.openPicognito}
+                  onRequestClose={this.handleClose}
+                  contentStyle={{textAlign: 'center'}}
+                >
+                  PICOGNITO
+                </Dialog>
+          <RaisedButton label="More Info" onClick={this.handleOpenPassPass} style={{marginRight: '150px'}}/>
+                <Dialog
+                  title="PassPass"
+                  actions={actions}
+                  modal={false}
+                  open={this.state.openPassPass}
+                  onRequestClose={this.handleClose}
+                  contentStyle={{textAlign: 'center'}}
+                >
+                  PASSPASS
+                </Dialog>
+          </div>
       </div>
     );
   }
