@@ -108,8 +108,11 @@ goToLink = (tile) => {
                   open={this.state.openForgotten}
                   onRequestClose={this.handleClose}
                   contentStyle={{textAlign: 'center'}}
+                  autoScrollBodyContent={true}
+                  style={{height: '500px'}}
                 >
-                  DOES THIS WORKKKKKKKK?
+                  <img src='https://i.imgur.com/akXYYAY.png' style={{maxHeight: '250px'}}/> <br/><br/>
+                  Forgotten is a logic-based game. It's written in a text style and features a storyline in which the user must play through the levels to unlock items and secrets about their character. This web app was developed by a team of engineers working collaboratively over the span of a month. My role focused mainly on the user experience and interface.
                 </Dialog>
           <RaisedButton label="About Picognito" onClick={this.handleOpenPicognito} style={{margin: 'auto'}}/>
                 <Dialog
