@@ -109,7 +109,7 @@ goToLink = (tile) => {
                   onRequestClose={this.handleClose}
                   contentStyle={{textAlign: 'center'}}
                 >
-                  FORGOTTEN
+                  DOES THIS WORKKKKKKKK?
                 </Dialog>
           <RaisedButton label="About Picognito" onClick={this.handleOpenPicognito} style={{margin: 'auto'}}/>
                 <Dialog
