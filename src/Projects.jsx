@@ -123,6 +123,7 @@ goToLink = (tile) => {
                   onRequestClose={this.handleClose}
                   contentStyle={{textAlign: 'center'}}
                 >
+                  <img src='https://i.imgur.com/Cg8oxk8.png'style={{maxHeight: '250px'}}/> <br/><br/>
                   PICOGNITO
                 </Dialog>
           <RaisedButton label="About PassPass" onClick={this.handleOpenPassPass} style={{marginRight: '120px'}}/>
@@ -134,6 +135,7 @@ goToLink = (tile) => {
                   onRequestClose={this.handleClose}
                   contentStyle={{textAlign: 'center'}}
                 >
+                  <img src='https://i.imgur.com/400HqKP.png'style={{maxHeight: '250px'}}/> <br/><br/>
                   PASSPASS
                 </Dialog>
           </div>
