@@ -19,9 +19,9 @@ class Home extends Component {
             <strong> RYAN SPENCER ATTICK </strong>
           </Subheader>
           <div
-            style={{fontSize: '30px', width: '700px', height: '200px', float: 'right', marginRight: '100px', marginTop: '100px', color: 'rgba(0, 0, 0, 0.54)'}}
+            style={{fontSize: '25px', width: '700px', height: '200px', float: 'right', marginRight: '100px', marginTop: '100px', color: 'rgba(0, 0, 0, 0.54)'}}
           >
-            <strong>I am a fullstack software engineer based in the San Francisco Bay Area looking for a challenging position with a company that is focused on making a positive social impact.</strong>
+            <strong>I am a fullstack software engineer based in the San Francisco Bay Area specializing in frontend frameworks. My focus has primarily been on building efficient Javascript applications that create beautiful user interfaces and intuitive user flow. I'm passionate about using new and innovative concepts to solve problems and build comprehensive applications.</strong>
           </div>
         <img
           src="https://i.imgur.com/qYkliRF.jpg"

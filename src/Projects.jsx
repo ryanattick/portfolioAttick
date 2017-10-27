@@ -27,8 +27,9 @@ const tilesData = [
     link: 'http://www.ninjarabbits.com/login'
     },
   {
-    img: 'https://i.imgur.com/zXq7HOU.png',
-    title: 'Picognito'
+    img: 'https://i.imgur.com/YiFJ6F4.png',
+    title: 'Picognito',
+    link: 'https://picognito.herokuapp.com/'
   },
   {
     img: 'https://i.imgur.com/9HiKW11.png',
@@ -110,7 +111,6 @@ goToLink = (tile) => {
                   onRequestClose={this.handleClose}
                   contentStyle={{textAlign: 'center'}}
                   autoScrollBodyContent={true}
-                  style={{height: '500px'}}
                 >
                   <img src='https://i.imgur.com/akXYYAY.png' style={{maxHeight: '250px'}}/> <br/><br/>
                   Forgotten is a logic-based game. It's written in a text style and features a storyline in which the user must play through the levels to unlock items and secrets about their character. This web app was developed by a team of four engineers working collaboratively over the span of a month. My role focused mainly on the user experience and interface.
