@@ -20,7 +20,7 @@ class Home extends Component {
           <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'nowrap', justifyContent: 'center', alignContent: 'stretch', alignItems: 'center'}}>
             <img
               src="https://i.imgur.com/qYkliRF.jpg"
-              style={{maxHeight: '300px', borderRadius: '150px', margin: '70px'}}
+              style={{width: '20%', height: 'auto', borderRadius: '150px', margin: '70px'}}
             />
             <div
               style={{maxWidth: '700px', height: '200px', fontSize: '2vw', color: 'rgba(0, 0, 0, 0.54)'}}
