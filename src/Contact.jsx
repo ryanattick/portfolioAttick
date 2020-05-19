@@ -8,7 +8,7 @@ class Contact extends Component {
   }
 
   goToGithub = () => {
-    window.open('https://github.com/ryanattick');
+    window.open('https://github.com/spencerattick');
   }
 
   goToEmail = () => {
